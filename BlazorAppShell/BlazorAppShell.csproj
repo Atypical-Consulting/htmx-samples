@@ -18,4 +18,8 @@
     <_ContentIncludedByDefault Remove="wwwroot\bootstrap\bootstrap.min.css.map" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TheAppManager" Version="2.0.0" />
+  </ItemGroup>
+
 </Project>
