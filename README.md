@@ -45,6 +45,18 @@ Application layer can be tested in isolation.
 
 **Project graph:** `Web` → `Application` + `Infrastructure`; `Application` and `Infrastructure` both → `Domain`. Domain has zero dependencies.
 
+## Routing via tag helper
+
+Views write `<button hx-action="Edit" hx-route-id="@Model.Id" ...>` instead of
+`<button hx-get="/contacts/1/edit" ...>`. The `HtmxActionTagHelper` resolves
+the action to its URL via `LinkGenerator` and emits the correct `hx-{verb}`
+based on the action's `[HttpGet]` / `[HttpPost]` / `[HttpPut]` / `[HttpDelete]`
+attribute.
+
+Effect: renaming an action or changing a route attribute fails at render time
+(500 with a descriptive message) instead of silently breaking HTMX requests
+in the browser. See `src/HtmxMvc.Web/TagHelpers/HtmxActionTagHelper.cs`.
+
 ## Notes
 
 - Antiforgery: `[AutoValidateAntiforgeryToken]` on the controller; the token is
@@ -61,3 +73,5 @@ Application layer can be tested in isolation.
 - Demo plan: `docs/superpowers/plans/2026-05-19-htmx-contacts-demo.md`
 - Hex refactor spec: `docs/superpowers/specs/2026-05-20-hexagonal-refactor-design.md`
 - Hex refactor plan: `docs/superpowers/plans/2026-05-20-hexagonal-refactor.md`
+- Tag helper spec: `docs/superpowers/specs/2026-05-20-htmx-tag-helper-design.md`
+- Tag helper plan: `docs/superpowers/plans/2026-05-20-htmx-tag-helper.md`
