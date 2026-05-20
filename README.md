@@ -3,15 +3,26 @@
 Small ASP.NET Core MVC (.NET 10) demo showing six HTMX 2 patterns in one
 cohesive page: active search, append-on-create, inline edit,
 swap-back-on-cancel, in-place update, and delete-row. Data lives in an
-in-memory singleton. Styling via Tailwind Play CDN.
+in-memory singleton. Styling via Tailwind Play CDN. Organized as a
+hexagonal (ports & adapters) solution.
 
 ## Run
 
 ```powershell
-dotnet run --project src/HtmxMvc
+dotnet run --project src/HtmxMvc.Web
 ```
 
 Then open the URL printed by Kestrel (or pass `--urls http://localhost:5099`).
+
+## Test
+
+```powershell
+dotnet test
+```
+
+Thirteen xUnit.v3 tests cover the Application handlers against a
+hand-rolled fake repository — no Infrastructure reference, proving the
+Application layer can be tested in isolation.
 
 ## Try it
 
@@ -26,14 +37,13 @@ Then open the URL printed by Kestrel (or pass `--urls http://localhost:5099`).
 
 | Path | Responsibility |
 |---|---|
-| `src/HtmxMvc/Models/Contact.cs` | The model |
-| `src/HtmxMvc/Services/ContactService.cs` | Thread-safe in-memory store, seeded |
-| `src/HtmxMvc/Controllers/ContactsController.cs` | One page action + six partial actions |
-| `src/HtmxMvc/Views/Contacts/Index.cshtml` | The page (search, add form, table) |
-| `src/HtmxMvc/Views/Shared/_Layout.cshtml` | HTMX + Tailwind CDN, antiforgery `hx-headers` |
-| `src/HtmxMvc/Views/Shared/_ContactRow.cshtml` | Read-only `<tr>` |
-| `src/HtmxMvc/Views/Shared/_ContactEditRow.cshtml` | Inline edit `<tr>` |
-| `src/HtmxMvc/Views/Shared/_ContactList.cshtml` | `<tbody>` rows for search results |
+| `src/HtmxMvc.Domain/` | `Contact` entity and `IContactRepository` port. No dependencies. |
+| `src/HtmxMvc.Application/` | One handler per use case (`ListContactsHandler`, `SearchContactsHandler`, etc.), `ContactInput` write DTO, `AddApplication()` DI extension. Depends only on Domain. |
+| `src/HtmxMvc.Infrastructure/` | `InMemoryContactRepository` (thread-safe singleton, seeded), `AddInfrastructure()` DI extension. Depends only on Domain. |
+| `src/HtmxMvc.Web/` | Composition root. `Program.cs` calls `AddApplication()` + `AddInfrastructure()`. `ContactsController` injects the six handlers. Views render `HtmxMvc.Domain.Contact`. |
+| `tests/HtmxMvc.Application.Tests/` | xUnit.v3 tests against a hand-rolled `FakeContactRepository`. References `Application` + `Domain` only. |
+
+**Project graph:** `Web` → `Application` + `Infrastructure`; `Application` and `Infrastructure` both → `Domain`. Domain has zero dependencies.
 
 ## Notes
 
@@ -47,5 +57,7 @@ Then open the URL printed by Kestrel (or pass `--urls http://localhost:5099`).
 
 ## Design docs
 
-- Spec: `docs/superpowers/specs/2026-05-19-htmx-contacts-demo-design.md`
-- Plan: `docs/superpowers/plans/2026-05-19-htmx-contacts-demo.md`
+- Demo spec: `docs/superpowers/specs/2026-05-19-htmx-contacts-demo-design.md`
+- Demo plan: `docs/superpowers/plans/2026-05-19-htmx-contacts-demo.md`
+- Hex refactor spec: `docs/superpowers/specs/2026-05-20-hexagonal-refactor-design.md`
+- Hex refactor plan: `docs/superpowers/plans/2026-05-20-hexagonal-refactor.md`
