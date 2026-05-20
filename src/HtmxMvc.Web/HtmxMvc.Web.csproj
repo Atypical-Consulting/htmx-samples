@@ -12,4 +12,8 @@
     <ProjectReference Include="..\HtmxMvc.Infrastructure\HtmxMvc.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TheAppManager" Version="2.0.0" />
+  </ItemGroup>
+
 </Project>
