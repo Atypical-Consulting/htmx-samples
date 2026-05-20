@@ -2,7 +2,7 @@ using HtmxMvc.Application.Contacts;
 using HtmxMvc.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HtmxMvc.Controllers;
+namespace HtmxMvc.Features.Contacts;
 
 [AutoValidateAntiforgeryToken]
 public sealed class ContactsController(

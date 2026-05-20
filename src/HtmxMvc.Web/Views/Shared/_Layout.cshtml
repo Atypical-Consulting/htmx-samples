@@ -59,9 +59,15 @@
 <body class="bg-slate-50 text-slate-900"
       hx-headers='@($"{{\"{antiforgeryHeader}\": \"{antiforgeryToken}\"}}")'>
     <header class="bg-white border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-6 py-4">
-            <h1 class="text-2xl font-semibold">HTMX Contacts Demo</h1>
-            <p class="text-sm text-slate-500">ASP.NET Core MVC on .NET 10 + HTMX 2</p>
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-end justify-between">
+            <div>
+                <h1 class="text-2xl font-semibold">HTMX Contacts Demo</h1>
+                <p class="text-sm text-slate-500">ASP.NET Core MVC on .NET 10 + HTMX 2</p>
+            </div>
+            <nav class="flex gap-4 text-sm">
+                <a href="/" class="text-blue-600 hover:underline">Contacts</a>
+                <a href="/dashboard" class="text-blue-600 hover:underline">Dashboard</a>
+            </nav>
         </div>
     </header>
     <main class="max-w-4xl mx-auto px-6 py-8">

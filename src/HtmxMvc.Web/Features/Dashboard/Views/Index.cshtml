@@ -1,0 +1,30 @@
+@model DashboardStats
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<section class="space-y-6">
+    <div>
+        <h2 class="text-lg font-semibold mb-2">Live stats</h2>
+        <p class="text-sm muted">
+            Auto-refreshes every 3 seconds. Switch the "recent" count to see the URL
+            update server-side via <code>Response.Htmx(h =&gt; h.PushUrl(...))</code>.
+        </p>
+    </div>
+
+    <div class="flex gap-2" role="tablist" aria-label="Recent count">
+        @foreach (var n in new[] { 5, 10, 25 })
+        {
+            var isActive = Model.RecentCount == n;
+            <button class="@(isActive ? "" : "secondary")"
+                    hx-action="Index"
+                    hx-route-recent="@n"
+                    hx-target="#dashboard-stats"
+                    hx-swap="outerHTML">
+                Last @n
+            </button>
+        }
+    </div>
+
+    <partial name="_Stats" model="Model" />
+</section>

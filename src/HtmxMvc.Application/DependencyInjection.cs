@@ -1,4 +1,5 @@
 using HtmxMvc.Application.Contacts;
+using HtmxMvc.Application.Dashboard;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HtmxMvc.Application;
@@ -13,6 +14,7 @@ public static class DependencyInjection
         services.AddScoped<AddContactHandler>();
         services.AddScoped<UpdateContactHandler>();
         services.AddScoped<DeleteContactHandler>();
+        services.AddScoped<GetDashboardStatsHandler>();
         return services;
     }
 }
