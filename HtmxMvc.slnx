@@ -5,4 +5,7 @@
     <Project Path="src/HtmxMvc.Infrastructure/HtmxMvc.Infrastructure.csproj" />
     <Project Path="src/HtmxMvc.Web/HtmxMvc.Web.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HtmxMvc.Application.Tests/HtmxMvc.Application.Tests.csproj" />
+  </Folder>
 </Solution>
