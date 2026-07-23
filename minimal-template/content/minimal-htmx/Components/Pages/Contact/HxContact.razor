@@ -1,0 +1,15 @@
+<div hx-target="this" hx-swap="outerHTML">
+  <div><label>First Name</label>: @Contact.FirstName</div>
+  <div><label>Last Name</label>: @Contact.LastName</div>
+  <div><label>Email</label>: @Contact.Email</div>
+  <button hx-get="@($"/htmx/contact/{Contact.Id}/edit")" class="btn btn-primary">
+    Click To Edit
+  </button>
+</div>
+
+@code{
+
+  [Parameter, EditorRequired]
+  public required Person Contact { get; set; }
+  
+}
