@@ -2,6 +2,20 @@
 
 # HtmxMvc
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![Atypical-Consulting - aspnet-htmx-mvc](https://img.shields.io/static/v1?label=Atypical-Consulting&message=aspnet-htmx-mvc&color=blue&logo=github)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc)
+![Top language](https://img.shields.io/github/languages/top/Atypical-Consulting/aspnet-htmx-mvc)
+[![Stars](https://img.shields.io/github/stars/Atypical-Consulting/aspnet-htmx-mvc?style=social)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/stargazers)
+[![Forks](https://img.shields.io/github/forks/Atypical-Consulting/aspnet-htmx-mvc?style=social)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/Atypical-Consulting/aspnet-htmx-mvc)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/Atypical-Consulting/aspnet-htmx-mvc)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/Atypical-Consulting/aspnet-htmx-mvc)](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/commits)
+<!-- portfolio-badges:end -->
+
+
 A reference implementation showing how to build server-rendered ASP.NET Core
 MVC apps with HTMX 2 — **organized by feature, composed by module, persisted
 by SQLite, free of client-side JavaScript**.
