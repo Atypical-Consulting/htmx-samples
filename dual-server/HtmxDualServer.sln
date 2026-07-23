@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppShell", "BlazorAppShell\BlazorAppShell.csproj", "{AAD0797F-233D-4864-8197-22EE34BAA99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmxApi", "HtmxApi\HtmxApi.csproj", "{1D78534C-6633-4385-8129-11796DCD45BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAD0797F-233D-4864-8197-22EE34BAA99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD0797F-233D-4864-8197-22EE34BAA99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD0797F-233D-4864-8197-22EE34BAA99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD0797F-233D-4864-8197-22EE34BAA99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D78534C-6633-4385-8129-11796DCD45BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D78534C-6633-4385-8129-11796DCD45BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D78534C-6633-4385-8129-11796DCD45BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D78534C-6633-4385-8129-11796DCD45BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
