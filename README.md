@@ -64,6 +64,19 @@ dotnet run
 Each folder was merged with **full git history preserved** (`git subtree`). The
 original repositories are archived and redirect here.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10 · .NET 8**
+- TheAppManager
+- Microsoft.AspNetCore.OpenApi
+- Swashbuckle.AspNetCore
+- Microsoft.TemplateEngine.Tasks
+- Carter
+
+<!-- portfolio-techstack:end -->
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
