@@ -2,6 +2,21 @@
 
 # htmx Samples
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![Atypical-Consulting - htmx-samples](https://img.shields.io/static/v1?label=Atypical-Consulting&message=htmx-samples&color=blue&logo=github)](https://github.com/Atypical-Consulting/htmx-samples)
+![Top language](https://img.shields.io/github/languages/top/Atypical-Consulting/htmx-samples)
+[![Stars](https://img.shields.io/github/stars/Atypical-Consulting/htmx-samples?style=social)](https://github.com/Atypical-Consulting/htmx-samples/stargazers)
+[![Forks](https://img.shields.io/github/forks/Atypical-Consulting/htmx-samples?style=social)](https://github.com/Atypical-Consulting/htmx-samples/network/members)
+[![License](https://img.shields.io/github/license/Atypical-Consulting/htmx-samples)](https://github.com/Atypical-Consulting/htmx-samples/blob/HEAD/LICENSE)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/Atypical-Consulting/htmx-samples)](https://github.com/Atypical-Consulting/htmx-samples/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/Atypical-Consulting/htmx-samples)](https://github.com/Atypical-Consulting/htmx-samples/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/Atypical-Consulting/htmx-samples)](https://github.com/Atypical-Consulting/htmx-samples/commits)
+<!-- portfolio-badges:end -->
+
+
 > Ways to build **HTMX-powered .NET apps** — a starter template, an MVC reference,
 > and a dual-server experiment, consolidated in one place (full git history preserved).
 
