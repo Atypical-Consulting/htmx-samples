@@ -1,3 +1,5 @@
+![MinimalHtmx banner](.github/banner.png)
+
 # MinimalHtmx Template 📦🚀
 
 A minimal .NET template for creating HTMX-based Blazor projects, leveraging Carter for routing and component-based architectures. This template provides a foundation for building interactive, server-driven web applications with Blazor and HTMX.
