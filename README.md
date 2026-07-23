@@ -34,6 +34,17 @@ cd HtmxDualServer
 dotnet run --project HtmxApi
 ```
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- TheAppManager
+- Microsoft.AspNetCore.OpenApi
+- Swashbuckle.AspNetCore
+
+<!-- portfolio-techstack:end -->
+
 ## License
 MIT
 
