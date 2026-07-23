@@ -16,6 +16,19 @@
 [![Last commit](https://img.shields.io/github/last-commit/Atypical-Consulting/htmx-samples)](https://github.com/Atypical-Consulting/htmx-samples/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Samples](#samples)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [History](#history)
+- [License](#license)
+
+<!-- portfolio-toc:end -->
+
+
 
 > Ways to build **HTMX-powered .NET apps** — a starter template, an MVC reference,
 > and a dual-server experiment, consolidated in one place (full git history preserved).
