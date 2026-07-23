@@ -2,6 +2,21 @@
 
 # MinimalHtmx Template 📦🚀
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - MinimalHtmx](https://img.shields.io/static/v1?label=phmatray&message=MinimalHtmx&color=blue&logo=github)](https://github.com/phmatray/MinimalHtmx)
+![Top language](https://img.shields.io/github/languages/top/phmatray/MinimalHtmx)
+[![Stars](https://img.shields.io/github/stars/phmatray/MinimalHtmx?style=social)](https://github.com/phmatray/MinimalHtmx/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/MinimalHtmx?style=social)](https://github.com/phmatray/MinimalHtmx/network/members)
+[![License](https://img.shields.io/github/license/phmatray/MinimalHtmx)](https://github.com/phmatray/MinimalHtmx/blob/HEAD/LICENSE)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/MinimalHtmx)](https://github.com/phmatray/MinimalHtmx/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/MinimalHtmx)](https://github.com/phmatray/MinimalHtmx/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/MinimalHtmx)](https://github.com/phmatray/MinimalHtmx/commits)
+<!-- portfolio-badges:end -->
+
+
 A minimal .NET template for creating HTMX-based Blazor projects, leveraging Carter for routing and component-based architectures. This template provides a foundation for building interactive, server-driven web applications with Blazor and HTMX.
 
 ## Table of Contents 📋
