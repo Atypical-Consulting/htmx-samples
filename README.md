@@ -1,3 +1,5 @@
+![htmx-samples banner](.github/banner.png)
+
 # htmx Samples
 
 > Ways to build **HTMX-powered .NET apps** — a starter template, an MVC reference,
