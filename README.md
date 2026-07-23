@@ -1,3 +1,5 @@
+![HtmxDualServer banner](.github/banner.png)
+
 # HtmxDualServer
 
 > A dual-server architecture combining Blazor and HTMX for hybrid web applications.
