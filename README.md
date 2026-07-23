@@ -131,6 +131,16 @@ Components are located by feature in the `Pages` folder. You can edit `HxContact
 
 <!-- portfolio-techstack:end -->
 
+## Roadmap 🗺️
+
+- [ ] Add more starter pages/components beyond Counter and Contact (e.g. a paginated list)
+- [ ] Upgrade template to .NET 9/10 once Carter and HTMX tooling catch up
+- [ ] Provide an optional authentication-enabled variant of the template
+- [ ] Add automated template tests (`dotnet new` + build verification) to CI
+- [ ] Publish a short guided tutorial/sample gallery for common HTMX + Carter patterns
+
+See the [open issues](https://github.com/phmatray/MinimalHtmx/issues) for details and to suggest new ideas.
+
 ## Contributing 🤝
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request to the repository.
