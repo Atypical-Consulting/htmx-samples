@@ -121,6 +121,16 @@ Components are located by feature in the `Pages` folder. You can edit `HxContact
 
 `AppState.cs` is used to store the state of your application, such as contact details. You can extend `AppState` to hold more data as your application grows.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 8**
+- Microsoft.TemplateEngine.Tasks
+- Carter
+
+<!-- portfolio-techstack:end -->
+
 ## Contributing 🤝
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request to the repository.
