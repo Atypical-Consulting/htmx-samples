@@ -73,6 +73,25 @@ A `htmxmvc.db` SQLite file lands in the working directory on first run
 dotnet test    # 60 tests across the three test projects
 ```
 
+## Usage
+
+Once `dotnet run --project src/HtmxMvc.Web` is running and you've opened the
+printed URL:
+
+- **Contacts** (`/`) — search contacts with live-filtering as you type
+  (debounced via `hx-trigger="keyup changed delay:300ms"`), add a new
+  contact (the row prepends to the top of the list), click a row to edit it
+  inline, save or cancel without a full page reload, and delete a row with
+  an `hx-confirm` prompt.
+- **Dashboard** (`/dashboard`) — view aggregate contact stats that
+  self-refresh every 3 seconds via HTMX polling, and switch the "recent
+  contacts" window (5 / 10 / 25) with the tab buttons — the URL updates via
+  `Response.Htmx(h => h.PushUrl(...))` without a full navigation.
+
+Every Create / Update / Delete on the Contacts page fires an
+`HX-Trigger: contact-saved` event that other elements on the page can react
+to (see [HTMX integration](#htmx-integration) above).
+
 ## Architecture
 
 The project graph is strictly one-way: Web depends on Application and
@@ -319,6 +338,21 @@ build a `DefaultHttpContext` and assert headers in/out.
 - xunit.v3
 
 <!-- portfolio-techstack:end -->
+
+## Roadmap
+
+- [ ] Vendor and pin HTMX and Tailwind locally with Subresource Integrity
+      hashes instead of loading them from `unpkg.com` / `cdn.tailwindcss.com`
+- [ ] Replace `Database.EnsureCreated()` with real EF Core migrations
+      (`dotnet ef migrations add Initial` + `Database.Migrate()`)
+- [ ] Add authentication/authorization to gate the Contacts and Dashboard
+      features
+- [ ] Add a CI workflow that runs `dotnet test` across the three test
+      projects on every push and PR
+- [ ] Add a second domain entity/feature module to further prove out the
+      `IAppModule` composition pattern
+
+See the [open issues](https://github.com/Atypical-Consulting/aspnet-htmx-mvc/issues) for more.
 
 <!-- portfolio-sections:start -->
 
