@@ -1,0 +1,19 @@
+@model HtmxMvc.Domain.Contact
+<tr id="contact-@Model.Id">
+    <td>@Model.Name</td>
+    <td class="muted">@Model.Email</td>
+    <td class="muted">@Model.Phone</td>
+    <td class="actions space-x-2">
+        <button class="link"
+                hx-action="Edit"
+                hx-route-id="@Model.Id"
+                hx-target="#contact-@Model.Id"
+                hx-swap="outerHTML">Edit</button>
+        <button class="link danger"
+                hx-action="Delete"
+                hx-route-id="@Model.Id"
+                hx-target="#contact-@Model.Id"
+                hx-swap="outerHTML"
+                hx-confirm="Delete @Model.Name?">Delete</button>
+    </td>
+</tr>

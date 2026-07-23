@@ -1,0 +1,45 @@
+@model DashboardStats
+<div id="dashboard-stats"
+     class="space-y-6"
+     hx-action="Index"
+     hx-route-recent="@Model.RecentCount"
+     hx-trigger="every 3s"
+     hx-swap="outerHTML">
+
+    <div class="card p-6">
+        <div class="text-sm muted uppercase tracking-wide">Total contacts</div>
+        <div class="text-5xl font-semibold mt-1">@Model.TotalContacts</div>
+    </div>
+
+    <div class="card overflow-hidden">
+        <div class="px-4 py-2 bg-slate-100 text-sm text-slate-700">
+            Last @Model.RecentCount contacts (newest first)
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.RecentContacts.Count == 0)
+                {
+                    <tr><td colspan="3" class="empty">No contacts yet.</td></tr>
+                }
+                else
+                {
+                    foreach (var c in Model.RecentContacts)
+                    {
+                        <tr>
+                            <td class="muted">@c.Id</td>
+                            <td>@c.Name</td>
+                            <td class="muted">@c.Email</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

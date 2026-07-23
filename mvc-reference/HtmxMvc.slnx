@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HtmxMvc.Application/HtmxMvc.Application.csproj" />
+    <Project Path="src/HtmxMvc.Domain/HtmxMvc.Domain.csproj" />
+    <Project Path="src/HtmxMvc.Infrastructure/HtmxMvc.Infrastructure.csproj" />
+    <Project Path="src/HtmxMvc.Web/HtmxMvc.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HtmxMvc.Application.Tests/HtmxMvc.Application.Tests.csproj" />
+    <Project Path="tests/HtmxMvc.Infrastructure.Tests/HtmxMvc.Infrastructure.Tests.csproj" />
+    <Project Path="tests/HtmxMvc.Web.Tests/HtmxMvc.Web.Tests.csproj" />
+  </Folder>
+</Solution>

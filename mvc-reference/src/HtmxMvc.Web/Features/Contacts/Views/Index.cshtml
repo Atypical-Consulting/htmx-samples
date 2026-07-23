@@ -1,0 +1,53 @@
+@model IReadOnlyList<HtmxMvc.Domain.Contact>
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<section class="space-y-6">
+    <div>
+        <label for="q">Search</label>
+        <input id="q" type="search" name="q"
+               placeholder="Type to filter..."
+               class="w-full"
+               hx-action="List"
+               hx-trigger="keyup changed delay:300ms, search"
+               hx-target="#contact-rows"
+               hx-swap="innerHTML" />
+    </div>
+
+    <form hx-action="Create"
+          hx-target="#contact-rows"
+          hx-swap="afterbegin"
+          hx-on:contact-saved="if(event.detail.action === 'created') this.reset()"
+          class="card form-row items-end p-4">
+        <div class="field">
+            <label>Name</label>
+            <input name="Name" required />
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input name="Email" />
+        </div>
+        <div class="field">
+            <label>Phone</label>
+            <input name="Phone" />
+        </div>
+        <button type="submit">Add</button>
+    </form>
+
+    <div class="card overflow-hidden">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th class="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="contact-rows">
+                <partial name="_ContactList" model="Model" />
+            </tbody>
+        </table>
+    </div>
+</section>
