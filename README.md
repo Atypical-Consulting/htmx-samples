@@ -2,6 +2,20 @@
 
 # HtmxDualServer
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - HtmxDualServer](https://img.shields.io/static/v1?label=phmatray&message=HtmxDualServer&color=blue&logo=github)](https://github.com/phmatray/HtmxDualServer)
+![Top language](https://img.shields.io/github/languages/top/phmatray/HtmxDualServer)
+[![Stars](https://img.shields.io/github/stars/phmatray/HtmxDualServer?style=social)](https://github.com/phmatray/HtmxDualServer/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/HtmxDualServer?style=social)](https://github.com/phmatray/HtmxDualServer/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/HtmxDualServer)](https://github.com/phmatray/HtmxDualServer/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/HtmxDualServer)](https://github.com/phmatray/HtmxDualServer/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/HtmxDualServer)](https://github.com/phmatray/HtmxDualServer/commits)
+<!-- portfolio-badges:end -->
+
+
 > A dual-server architecture combining Blazor and HTMX for hybrid web applications.
 
 ## Description
