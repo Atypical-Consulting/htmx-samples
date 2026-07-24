@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build (${{ matrix.solution }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - solution: dual-server/HtmxDualServer.sln
+            has_tests: false
+          - solution: mvc-reference/HtmxMvc.slnx
+            has_tests: true
+        # Known non-building subprojects (excluded):
+        # - minimal-template/ (Atypical.MinimalHtmx.Templates.csproj) has no .sln/.slnx file at all —
+        #   it's a dotnet new template NuGet package (content files only), not a buildable solution,
+        #   so it has no place in a solution-path build matrix.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore "${{ matrix.solution }}"
+
+      - name: Build
+        run: dotnet build "${{ matrix.solution }}" -c Release --no-restore
+
+      - name: Test
+        if: matrix.has_tests
+        run: dotnet test "${{ matrix.solution }}" -c Release --no-build --verbosity normal
